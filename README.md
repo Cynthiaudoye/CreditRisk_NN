@@ -93,7 +93,6 @@ The best-performing model architecture had:
 4.	Hinton, G., Srivastava, N., & Krizhevsky, A. (2012). Improving Neural Networks by Preventing Co-Adaptation of Feature Detectors. arXiv preprint arXiv:1207.0580. Retrieved from https://arxiv.org/abs/1207.0580
 5.	He, H., & Garcia, E. A. (2009). Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering, 21(9), 1263–1284. Retrieved from https://doi.org/10.1109/TKDE.2008.239
 6.	Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press. Retrieved from https://www.deeplearningbook.org
-![image](https://github.com/user-attachments/assets/3793caeb-bdb0-4768-ac21-44121ad96f58)
 
 ---
 
