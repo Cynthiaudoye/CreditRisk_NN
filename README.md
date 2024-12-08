@@ -31,7 +31,7 @@ Run the following command to install all necessary packages:
 ```bash
 pip install tensorflow scikit-learn pandas matplotlib seaborn
 
-### Usage
+
 
 #### How to Run the Code
 1. Download the repository or clone it using the following command:
