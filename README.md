@@ -30,22 +30,3 @@ To replicate this project, ensure you have the following dependencies installed:
 Run the following command to install all necessary packages:
 ```bash
 pip install tensorflow scikit-learn pandas matplotlib seaborn
-
-
-
-#### How to Run the Code
-1. Download the repository or clone it using the following command:
-   ```bash
-   git clone https://github.com/<your-username>/MLP_CreditRisk_Tutorial.git
-   cd MLP_CreditRisk_Tutorial
-
-Open the Jupyter Notebook file (creditrisk_nn.ipynb) in your preferred environment, such as:
-Jupyter Notebook
-VSCode
-Google Colab
-Run the cells step-by-step to:
-Load and preprocess the dataset.
-Experiment with different architectures (depths and widths).
-Visualize results and evaluate performance.
-
-Replace `<your-username>` with your actual GitHub username before copying it into your `README.md`. Let me know if you need anything else! 😊
