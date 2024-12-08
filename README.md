@@ -72,7 +72,7 @@ Some of the key visualizations include:
 
 ### Files Included
 - **`creditrisk_nn.ipynb`**: Jupyter Notebook containing the full implementation of the project, including visualizations (heatmaps, line plots, and confusion matrix).
-- **LICENSE
+- ** LICENSE
 
 ---
 
