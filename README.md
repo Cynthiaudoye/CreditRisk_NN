@@ -72,6 +72,8 @@ Some of the key visualizations include:
 
 ### Files Included
 - **`creditrisk_nn.ipynb`**: Jupyter Notebook containing the full implementation of the project, including visualizations (heatmaps, line plots, and confusion matrix).
+- **`Images`**:
+  - Visualization plots: Heatmap showing AUC-ROC scores for various configurations, Heatmap of validation accuracy, Confusion matrix visualizing classification performance
 - **`LICENSE`**: File containing the project's license information.
 
 ---
