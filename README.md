@@ -87,13 +87,21 @@ The best-performing model architecture had:
 
 ---
 
-### References
-1.	Dua, D., & Graff, C. (2019). UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science. Dataset URL: https://www.openml.org/d/31
-2.	LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep Learning. Nature, 521(7553), 436–444. Retrieved from https://doi.org/10.1038/nature14539
-3.	Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: A Simple Way to Prevent Neural Networks from Overfitting. Journal of Machine Learning Research, 15(1), 1929–1958. Retrieved from http://jmlr.org/papers/v15/srivastava14a.html
-4.	Hinton, G., Srivastava, N., & Krizhevsky, A. (2012). Improving Neural Networks by Preventing Co-Adaptation of Feature Detectors. arXiv preprint arXiv:1207.0580. Retrieved from https://arxiv.org/abs/1207.0580
-5.	He, H., & Garcia, E. A. (2009). Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering, 21(9), 1263–1284. Retrieved from https://doi.org/10.1109/TKDE.2008.239
-6.	Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press. Retrieved from https://www.deeplearningbook.org
+## References
+
+1. Datacamp, n.d., Multilayer perceptrons in machine learning. Available at: [https://www.datacamp.com/tutorial/multilayer-perceptrons-in-machine-learning](https://www.datacamp.com/tutorial/multilayer-perceptrons-in-machine-learning) [Accessed 9 Dec. 2024].
+
+2. Dua, D. & Graff, C., 2019. UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science. Available at: [https://www.openml.org/d/31](https://www.openml.org/d/31) [Accessed 9 Dec. 2024].
+
+3. LeCun, Y., Bengio, Y. & Hinton, G., 2015. Deep Learning. *Nature*, 521(7553), pp.436–444. Available at: [https://doi.org/10.1038/nature14539](https://doi.org/10.1038/nature14539).
+
+4. Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I. & Salakhutdinov, R., 2014. Dropout: A Simple Way to Prevent Neural Networks from Overfitting. *Journal of Machine Learning Research*, 15(1), pp.1929–1958. Available at: [http://jmlr.org/papers/v15/srivastava14a.html](http://jmlr.org/papers/v15/srivastava14a.html).
+
+5. Hinton, G., Srivastava, N. & Krizhevsky, A., 2012. Improving Neural Networks by Preventing Co-Adaptation of Feature Detectors. *arXiv preprint*, arXiv:1207.0580. Available at: [https://arxiv.org/abs/1207.0580](https://arxiv.org/abs/1207.0580).
+
+6. He, H. & Garcia, E.A., 2009. Learning from Imbalanced Data. *IEEE Transactions on Knowledge and Data Engineering*, 21(9), pp.1263–1284. Available at: [https://doi.org/10.1109/TKDE.2008.239](https://doi.org/10.1109/TKDE.2008.239).
+
+7. Goodfellow, I., Bengio, Y. & Courville, A., 2016. *Deep Learning*. Cambridge, MA: MIT Press. Available at: [https://www.deeplearningbook.org](https://www.deeplearningbook.org) [Accessed 9 Dec. 2024].
 
 ---
 
