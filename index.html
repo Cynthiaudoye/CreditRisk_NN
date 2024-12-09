@@ -3,101 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploring Depth and Width in Multi-Layer Perceptron for Credit Risk Prediction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        p, li {
-            margin-bottom: 10px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .references ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .references ul li {
-            margin-bottom: 5px;
-        }
-    </style>
+    <title>Credit Risk Prediction Tutorial</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Exploring Depth and Width in Multi-Layer Perceptron for Credit Risk Prediction</h1>
-        <p><strong>NAME:</strong> CYNTHIA CHINENYE UDOYE</p>
-        <p><strong>STUDENT NO:</strong> 22029346</p>
+    <header>
+        <h1>Exploring Depth and Width in Multi-Layer Perceptrons for Credit Risk Prediction</h1>
+        <h3>NAME: CYNTHIA CHINENYE UDOYE</h3>
+        <h3>STUDENT NO: 22029346</h3>
+    </header>
 
+    <section id="abstract">
         <h2>Abstract</h2>
-        <p>This tutorial explores how the architecture of Multi-Layer Perceptrons (MLPs), specifically their depth (number of layers) and width (number of neurons per layer), impacts their performance in predicting credit risk...</p>
+        <p>
+            This tutorial explores how the architecture of Multi-Layer Perceptrons (MLPs), specifically their depth (number of layers) and width (number of neurons per layer), impacts their performance in predicting credit risk. Using the "Credit-G" dataset, we address class imbalance by applying class weights and test various combinations of layers and neurons. Our findings reveal that while increasing the depth of MLPs enhances their learning capacity, it also increases the risk of overfitting. Similarly, adding more neurons often increases computational time without consistently improving accuracy. The best-performing model achieved an AUC-ROC score of 0.80. This tutorial provides a clear and practical guide for using neural networks to tackle imbalanced data challenges in credit risk prediction.
+        </p>
+    </section>
 
+    <section id="introduction">
         <h2>Introduction</h2>
-        <p>Predicting credit risk is very important in finance...</p>
-
-        <h2>Dataset and Preprocessing</h2>
-        <ul>
-            <li>One-Hot Encoding: Categorical features were converted into numerical values...</li>
-            <li>Scaling: Numerical features were standardized using StandardScaler...</li>
-            <li>Data Splitting: The dataset was divided into training, validation, and test sets...</li>
-            <li>Class Weights: Class weights were calculated and applied during training...</li>
-        </ul>
-
-        <h2>Model Architecture and Design</h2>
-        <h3>Model Overview</h3>
-        <ul>
-            <li><strong>Input Layer:</strong> Receives the processed dataset...</li>
-            <li><strong>Hidden Layers:</strong> Multiple hidden layers were tested...</li>
-            <li><strong>Output Layer:</strong> Contains one neuron with a sigmoid activation function...</li>
-        </ul>
-
-        <h2>Experimentation and Results</h2>
-        <h3>Experimental Setup</h3>
-        <p>To explore how the architecture of Multi-Layer Perceptrons (MLPs) impacts credit risk prediction...</p>
-
-        <h3>Presentation of Results</h3>
-        <ul>
-            <li><strong>Heatmaps:</strong> AUC-ROC and validation accuracy scores for all tested configurations...</li>
-            <li><strong>Line Plots:</strong> Trends in AUC-ROC scores across widths for each depth...</li>
-            <li><strong>Key Observations:</strong> Impact of depth and width...</li>
-        </ul>
-
-        <h2>Discussion of Best-Performing Model</h2>
-        <p>The best configuration, with 4 layers and 64 neurons per layer...</p>
-
-        <h2>Figures</h2>
-        <p>Include the following visual aids in the final document:</p>
-        <ul>
-            <li>A heatmap showing AUC-ROC scores for different depth-width combinations.</li>
-            <li>A heatmap of validation accuracy.</li>
-            <li>A line plot of AUC-ROC scores across widths for each depth.</li>
-        </ul>
-
-        <h2>Conclusion and Recommendations</h2>
-        <p>This tutorial explored how the architecture of Multi-Layer Perceptrons (MLPs)...</p>
-
-        <h2>References</h2>
-        <div class="references">
-            <ul>
-                <li>OpenML. (n.d.). Credit-G Dataset. Retrieved from https://www.openml.org/d/31</li>
-                <li>LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep Learning...</li>
-                <li>Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014)...</li>
-                <li>He, H., & Garcia, E. A. (2009). Learning from Imbalanced Data...</li>
-                <li>Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning...</li>
-            </ul>
-        </div>
-    </div>
+        <p>
+            Predicting credit risk is very important in finance. It helps banks and other financial institutions figure out which applicants are likely to repay loans, reducing the risk of losing money and increasing profits (Thomas et al., 2002). Credit risk models make the decision-making process in lending more reliable.
+        </p>
+        <p>
+            In this tutorial, we explore the use of Multi-Layer Perceptrons (MLPs), a type of neural network, for classifying credit data into 'good' and 'bad' risk categories. MLPs are particularly well-suited for this task due to their ability to model complex nonlinear relationships in data (LeCun et al., 2015). However, datasets like the "Credit-G" dataset often exhibit class imbalance, with significantly more 'good' cases than 'bad' (He and Garcia, 2009). To address this, we apply class weights to ensure equitable learning from both classes.
+        </p>
+        <p>
+            The objective of this tutorial is to investigate how the architecture of MLPs, specifically the number of layers (depth) and neurons per layer (width), influences model performance. While deeper networks can capture intricate patterns and wider layers enhance representational power, both architectures pose challenges, including increased computational cost and potential overfitting (Hinton et al., 2012). Performance will be assessed using metrics such as AUC-ROC, accuracy, precision, recall, F1-score, and validation loss, providing a comprehensive evaluation of these trade-offs.
+        </p>
+        <p>
+            This tutorial will take you through every step of the process, including understanding the dataset, preparing the data, testing different MLP designs, and looking at the results. By the end, we hope to gain valuable insights into building effective neural networks for credit risk prediction and similar challenges in finance.
+        </p>
+    </section>
 </body>
 </html>
