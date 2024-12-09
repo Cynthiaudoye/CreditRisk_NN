@@ -235,6 +235,104 @@
         <li><strong>Impact of Width:</strong> Wider layers (up to 64 neurons) enhanced learning capacity, but widths beyond this provided diminishing returns.</li>
     </ul>
 </section>
+
+<section id="best-performing-model">
+    <h2>Discussion of Best-Performing Model</h2>
+    <p>
+        The best configuration, with 4 layers and 64 neurons per layer, provided a strong balance between complexity and performance. It achieved:
+    </p>
+    <ul>
+        <li><strong>Precision (Good):</strong> 0.87</li>
+        <li><strong>Recall (Good):</strong> 0.76</li>
+        <li><strong>F1-Score (Good):</strong> 0.81</li>
+        <li><strong>Precision (Bad):</strong> 0.56</li>
+        <li><strong>Recall (Bad):</strong> 0.73</li>
+        <li><strong>F1-Score (Bad):</strong> 0.64</li>
+        <li><strong>Overall Accuracy:</strong> 75%</li>
+        <li><strong>AUC-ROC:</strong> 0.80</li>
+    </ul>
+    <p>
+        This architecture captured complex patterns effectively while maintaining generalisation. Its use of class weights ensured a fair balance in predictions for both 'good' and 'bad' credit risks, demonstrating its suitability for imbalanced datasets.
+    </p>
+</section>
+
+<section id="evaluation-best-model">
+    <h2>Evaluation of the Best Model</h2>
+
+    <h3>1. Evaluation Metrics</h3>
+    <p>
+        The best-performing model, with 4 layers and 64 neurons per layer, was evaluated on the test dataset. Key performance metrics were as follows:
+    </p>
+    <ul>
+        <li><strong>Precision (Good):</strong> 0.87</li>
+        <li><strong>Recall (Good):</strong> 0.76</li>
+        <li><strong>F1-Score (Good):</strong> 0.81</li>
+        <li><strong>Precision (Bad):</strong> 0.56</li>
+        <li><strong>Recall (Bad):</strong> 0.73</li>
+        <li><strong>F1-Score (Bad):</strong> 0.64</li>
+        <li><strong>Overall Accuracy:</strong> 75%</li>
+        <li><strong>AUC-ROC:</strong> 0.80</li>
+    </ul>
+    <p>
+        These results indicate that the model performed well overall, with strong precision and recall for the majority class ('good') and reasonable recall for the minority class ('bad').
+    </p>
+
+    <h3>2. Confusion Matrix</h3>
+    <p>
+        The confusion matrix for the best model shows:
+    </p>
+    <ul>
+        <li><strong>True Positives (Bad predicted as Bad):</strong> High recall for 'bad' credit indicates the model’s effectiveness in identifying these cases.</li>
+        <li><strong>True Negatives (Good predicted as Good):</strong> Strong precision for 'good' credit highlights its reliability in identifying trustworthy applicants.</li>
+    </ul>
+
+    <h3>3. Visualisation</h3>
+    <p>
+        The confusion matrix confirms that while the model performs well overall, it still occasionally misclassifies 'bad' credit as 'good.' This misclassification may be influenced by the inherent imbalance in the dataset. However, the application of class weights during training helps mitigate this issue by emphasising the minority class, thereby balancing the trade-off between precision and recall.
+    </p>
+    <figure>
+        <img src="https://raw.githubusercontent.com/Cynthiaudoye/MLP_CreditRisk_Tutorial/refs/heads/main/Images/Confusion%20Matrix%20for%20Model%20Performance%20Evaluation%20(Best%20Layer%20and%20Neurons%20Configuration).png" alt="Confusion Matrix for Model Performance Evaluation" style="width:100%; max-width:600px;">
+        <figcaption>
+            <strong>Figure 5:</strong> Confusion Matrix for Model Performance Evaluation (Best Layer and Neurons Configuration).
+        </figcaption>
+    </figure>
+
+    <h3>4. Insights</h3>
+    <ul>
+        <li><strong>AUC-ROC:</strong><br>
+            An AUC-ROC score of 0.80 indicates the model can reliably distinguish between 'good' and 'bad' credit risks. This metric reflects the model’s ability to handle imbalanced data effectively.
+        </li>
+        <li><strong>Precision-Recall Trade-Off:</strong><br>
+            The model’s precision for 'bad' credit (56%) is lower than its recall (73%), meaning it is more likely to catch potential bad credit cases but at the cost of some false positives.
+        </li>
+        <li><strong>Class Weights:</strong><br>
+            The use of class weights during training played a key role in ensuring the minority class ('bad') was not overlooked, improving its recall significantly.
+        </li>
+    </ul>
+</section>
+
+<section id="conclusion-recommendations">
+    <h2>Conclusion and Recommendations</h2>
+    <p>
+        This tutorial explored how the architecture of Multi-Layer Perceptrons (MLPs), specifically the number of layers (depth) and neurons per layer (width), affects their performance in predicting credit risk. The best model, with 4 layers and 64 neurons per layer, achieved a good balance between complexity and accuracy. It handled class imbalance effectively using class weights and achieved an AUC-ROC score of 0.80, along with strong precision and recall for both 'good' and 'bad' credit risks.
+    </p>
+
+    <h3>Practical Applications</h3>
+    <p>
+        The findings demonstrate that MLPs can be a valuable tool for credit risk prediction, helping financial institutions assess loan applications more reliably. By identifying patterns in credit data, these models can reduce default risks and improve decision-making in lending processes.
+    </p>
+
+    <h3>Recommendations for Future Exploration</h3>
+    <ul>
+        <li><strong>Testing on Additional Datasets:</strong> Applying the model to other credit datasets could validate its generalisability and robustness.</li>
+        <li><strong>Hyperparameter Tuning:</strong> Further tuning of learning rates, batch sizes, and regularisation parameters could optimise performance.</li>
+        <li><strong>Feature Engineering:</strong> Incorporating domain-specific knowledge to create new features might improve prediction accuracy.</li>
+    </ul>
+
+    <p>
+        In conclusion, this tutorial highlights how thoughtful design choices in neural network architecture can lead to efficient and reliable credit risk models. Future work could extend these insights to other financial applications, offering even broader benefits.
+    </p>
+</section>
     
 </body>
 </html>
