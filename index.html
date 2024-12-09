@@ -236,11 +236,12 @@
     </ul>
 </section>
 
-<section id="best-performing-model">
-    <h2>Discussion of Best-Performing Model</h2>
+<section id="discussion-evaluation">
+    <h2>Discussion & Evaluation of the Best-Performing Model</h2>
     <p>
-        The best configuration, with 4 layers and 64 neurons per layer, provided a strong balance between complexity and performance. It achieved:
+        The best-performing model used 4 layers and 64 neurons per layer. This setup balanced learning complex patterns and avoiding overfitting or unnecessary computational cost. It effectively predicted both "good" and "bad" credit risks, even with an imbalanced dataset.
     </p>
+    <h3>Key Metrics on the Test Dataset</h3>
     <ul>
         <li><strong>Precision (Good):</strong> 0.87</li>
         <li><strong>Recall (Good):</strong> 0.76</li>
@@ -252,29 +253,11 @@
         <li><strong>AUC-ROC:</strong> 0.80</li>
     </ul>
     <p>
-        This architecture captured complex patterns effectively while maintaining generalisation. Its use of class weights ensured a fair balance in predictions for both 'good' and 'bad' credit risks, demonstrating its suitability for imbalanced datasets.
+        This model captured complex patterns in the data while avoiding overfitting, thanks to dropout and regularization techniques. The use of class weights addressed the imbalanced dataset, ensuring that "bad" credit risks were not ignored.
     </p>
-</section>
-
-<section id="evaluation-best-model">
-    <h2>Evaluation of the Best Model</h2>
-
-    <h3>1. Evaluation Metrics</h3>
     <p>
-        The best-performing model, with 4 layers and 64 neurons per layer, was evaluated on the test dataset. Key performance metrics were as follows:
-    </p>
-    <ul>
-        <li><strong>Precision (Good):</strong> 0.87</li>
-        <li><strong>Recall (Good):</strong> 0.76</li>
-        <li><strong>F1-Score (Good):</strong> 0.81</li>
-        <li><strong>Precision (Bad):</strong> 0.56</li>
-        <li><strong>Recall (Bad):</strong> 0.73</li>
-        <li><strong>F1-Score (Bad):</strong> 0.64</li>
-        <li><strong>Overall Accuracy:</strong> 75%</li>
-        <li><strong>AUC-ROC:</strong> 0.80</li>
-    </ul>
-    <p>
-        These results indicate that the model performed well overall, with strong precision and recall for the majority class ('good') and reasonable recall for the minority class ('bad').
+        While the precision for 'bad' cases was lower, indicating some false positives, the high recall ensured the model successfully identified 'bad' credit risks. This balance makes the model highly useful in scenarios where identifying risky credit cases is more critical than avoiding occasional false alarms.
+        By balancing depth, width, and regularization, this architecture demonstrated strong performance and reliability for credit risk prediction.
     </p>
 
     <h3>2. Confusion Matrix</h3>
