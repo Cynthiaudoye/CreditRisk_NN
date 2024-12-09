@@ -74,5 +74,50 @@
             This tutorial will take you through every step of the process, including understanding the dataset, preparing the data, testing different MLP designs, and looking at the results. By the end, we hope to gain valuable insights into building effective neural networks for credit risk prediction and similar challenges in finance.
         </p>
     </section>
+    <section id="dataset-preprocessing">
+    <h2>Dataset and Preprocessing</h2>
+    <p>
+        The "Credit-G" dataset from OpenML contains financial records labelled as 'good' or 'bad' credit risks. It is commonly used in credit risk modelling because it reflects real-world lending data. However, the dataset is imbalanced, with more 'good' cases than 'bad,' making it harder for models to learn from the minority class.
+    </p>
+    <p>
+        The dataset includes both categorical and numerical features. The following preprocessing steps were applied:
+    </p>
+    <ol>
+        <li><strong>One-Hot Encoding:</strong> Categorical features were converted into numerical values to make them usable by the model.</li>
+        <li><strong>Scaling:</strong> Numerical features were standardised using <code>StandardScaler</code> to ensure that no single feature dominated the learning process.</li>
+        <li><strong>Data Splitting:</strong> The dataset was divided into training, validation, and test sets using stratified sampling to maintain the class distribution across all subsets.</li>
+        <li><strong>Class Weights:</strong> Class weights were calculated and applied during training to give equal importance to 'good' and 'bad' cases.</li>
+    </ol>
+    <p>
+        <strong>Key Considerations:</strong><br>
+        Reproducibility was ensured by using consistent random seeds for data splitting and preprocessing. Ethical considerations, such as avoiding bias amplification, were kept in mind to ensure fair treatment of both classes in the dataset.
+    </p>
+</section>
+
+<section id="model-architecture-design">
+    <h2>Model Architecture and Design</h2>
+    <p>
+        The Multi-Layer Perceptrons (MLP) is a neural network that learns patterns in data. In this tutorial, the MLP was used to classify credit risks as 'good' or 'bad' based on the features of the "Credit-G" dataset (OpenML, n.d.).
+    </p>
+    <h3>Model Overview</h3>
+    <ol>
+        <li>
+            <strong>Input Layer:</strong><br>
+            Receives the processed dataset, with the number of input nodes equal to the total number of features.
+        </li>
+        <li>
+            <strong>Hidden Layers:</strong><br>
+            <ul>
+                <li>Multiple hidden layers were tested, varying in the number of layers (depth) and neurons per layer (width).</li>
+                <li>Each layer uses the ReLU (Rectified Linear Unit) activation function to identify complex patterns (LeCun et al., 2015).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Output Layer:</strong><br>
+            Contains one neuron with a sigmoid activation function, predicting the probability of a record being a 'bad' credit risk.
+        </li>
+    </ol>
+</section>
+
 </body>
 </html>
