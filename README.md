@@ -35,7 +35,7 @@ pip install tensorflow scikit-learn pandas matplotlib seaborn
 ### How to Run the Code
 1. Download the repository or clone it using the following command:
 ```bash
-git clone https://github.com/<your-username>/MLP_CreditRisk_Tutorial.git
+git clone https://github.com/<Cynthiaudoye>/MLP_CreditRisk_Tutorial.git
 cd MLP_CreditRisk_Tutorial
 ```
 2. Open the Jupyter Notebook file (creditrisk_nn.ipynb) in your preferred environment, such as Jupyter Notebook, VSCode, or Google Colab.
