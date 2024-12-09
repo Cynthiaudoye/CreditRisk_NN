@@ -161,5 +161,80 @@
     </p>
 </section>
 
+<section id="experimentation-results">
+    <h2>Experimentation and Results</h2>
+
+    <h3>1. Experimental Setup</h3>
+    <p>
+        To explore how the architecture of Multi-Layer Perceptrons (MLPs) impacts credit risk prediction, different combinations of depths (number of hidden layers) and widths (number of neurons per layer) were examined. This table represents the performance of the models with varying configurations of depth, width, and epochs, using the Adam optimiser.
+    </p>
+    <ul>
+        <li><strong>Depth & Width Impact:</strong> Increasing depth and width improves training accuracy but can cause overfitting, shown by higher validation loss.</li>
+        <li><strong>Performance Trade-offs:</strong> Wider models (256) achieve better validation accuracy, converge faster, but may not always maximise AUC-ROC.</li>
+    </ul>
+
+    <!-- Figure 2 -->
+    <figure>
+        <img src="path-to-figure2.jpg" alt="Impact of Depth and Width on Model Performance Metrics" style="width:100%; max-width:600px;">
+        <figcaption>
+            <strong>Figure 2:</strong> Impact of Depth and Width on Model Performance Metrics.
+        </figcaption>
+    </figure>
+
+    <p>
+        The following metrics were used to evaluate model performance:
+    </p>
+    <ul>
+        <li><strong>AUC-ROC:</strong> Measures the model's ability to distinguish between 'good' and 'bad' credit risks.</li>
+        <li><strong>Precision:</strong> Indicates how many of the predicted 'bad' cases were correct.</li>
+        <li><strong>Recall:</strong> Measures how well the model identifies 'bad' credit cases.</li>
+        <li><strong>F1-Score:</strong> Balances precision and recall.</li>
+        <li><strong>Validation Accuracy:</strong> Reflects the overall correctness on the validation set.</li>
+    </ul>
+    <p>
+        Class weights were applied during training to handle the dataset's imbalance, ensuring both classes were equally represented in the learning process.
+    </p>
+
+    <h3>2. Presentation of Results</h3>
+    <p>
+        The results are summarised using heatmaps and line plots to show how performance changes with different depths and widths:
+    </p>
+    <ul>
+        <li>
+            <strong>Heatmaps:</strong><br>
+            AUC-ROC, validation accuracy, and validation loss scores for all tested configurations were visualised. The best-performing model had 4 layers and 64 neurons per layer, achieving an AUC-ROC score of 0.80 and a validation accuracy of 75%.
+        </li>
+    </ul>
+
+    <!-- Figure 3 -->
+    <figure>
+        <img src="path-to-figure3.jpg" alt="Model Performance Across Depths and Widths" style="width:100%; max-width:600px;">
+        <figcaption>
+            <strong>Figure 3:</strong> Model Performance Across Depths and Widths.
+        </figcaption>
+    </figure>
+
+    <ul>
+        <li>
+            <strong>Line Plots:</strong><br>
+            Trends in AUC-ROC scores across widths for each depth showed that increasing the width generally improved performance up to a certain point (64 neurons) but slightly dropped beyond that.
+        </li>
+    </ul>
+
+    <!-- Figure 4 -->
+    <figure>
+        <img src="path-to-figure4.jpg" alt="AUC-ROC Trends Across Widths and Depths" style="width:100%; max-width:600px;">
+        <figcaption>
+            <strong>Figure 4:</strong> AUC-ROC Trends Across Widths and Depths.
+        </figcaption>
+    </figure>
+
+    <h3>3. Key Observations</h3>
+    <ul>
+        <li><strong>Impact of Depth:</strong> Adding more layers improved the model’s ability to capture patterns, but too many layers (more than 4) could lead to overfitting.</li>
+        <li><strong>Impact of Width:</strong> Wider layers (up to 64 neurons) enhanced learning capacity, but widths beyond this provided diminishing returns.</li>
+    </ul>
+</section>
+    
 </body>
 </html>
