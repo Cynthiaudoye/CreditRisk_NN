@@ -99,13 +99,10 @@
     <p>
         The Multi-Layer Perceptrons (MLP) is a neural network that learns patterns in data. In this tutorial, the MLP was used to classify credit risks as 'good' or 'bad' based on the features of the "Credit-G" dataset (OpenML, n.d.).
     </p>
-
+    
     <h3>1. Model Overview</h3>
     <ul>
-        <li>
-            <strong>Input Layer:</strong><br>
-            Receives the processed dataset, with the number of input nodes equal to the total number of features.
-        </li>
+        <li><strong>Input Layer:</strong><br>Receives the processed dataset, with the number of input nodes equal to the total number of features.</li>
         <li>
             <strong>Hidden Layers:</strong><br>
             <ul>
@@ -113,53 +110,51 @@
                 <li>Each layer uses the ReLU (Rectified Linear Unit) activation function to identify complex patterns (LeCun et al., 2015).</li>
             </ul>
         </li>
-        <li>
-            <strong>Output Layer:</strong><br>
-            Contains one neuron with a sigmoid activation function, predicting the probability of a record being a 'bad' credit risk.
-        </li>
+        <li><strong>Output Layer:</strong><br>Contains one neuron with a sigmoid activation function, predicting the probability of a record being a 'bad' credit risk.</li>
     </ul>
-
-    <!-- Adding the figure -->
     <figure>
-        <img src="https://raw.githubusercontent.com/Cynthiaudoye/MLP_CreditRisk_Tutorial/refs/heads/main/Images/The%20structure%20of%20Multi-Layer%20Perceptrons%20(MLP)%20consists%20of%20interconnected%20layers%20facilitating%20complex%20computations%20(Datacamp%2C%20n.d.)..png" alt="Structure of Multi-Layer Perceptrons" style="width:100%; max-width:600px;">
-        <figcaption>
-            <strong>Figure 1:</strong> The structure of Multi-Layer Perceptrons (MLP) consists of interconnected layers facilitating complex computations (Datacamp, n.d.).
-        </figcaption>
+        <img src="https://raw.githubusercontent.com/Cynthiaudoye/MLP_CreditRisk_Tutorial/refs/heads/main/Images/The%20structure%20of%20Multi-Layer%20Perceptrons%20(MLP)%20consists%20of%20interconnected%20layers%20facilitating%20complex%20computations%20(Datacamp%2C%20n.d.)..png" alt="Structure of MLP" style="width:100%; max-width:600px;">
+        <figcaption><strong>Figure 1:</strong> The structure of Multi-Layer Perceptrons (MLP) consists of interconnected layers facilitating complex computations (Datacamp, n.d.).</figcaption>
     </figure>
-
-    <h3>2. Improving the Model</h3>
+    
+    <h3>2. Building the MLP</h3>
+    <p>
+        The <code>build_mlp_model()</code> function creates a multi-layer perceptron (MLP) model using TensorFlow and Keras. It accepts parameters for the number of layers, neurons per layer, activation functions, and optimizer settings. The model is compiled for binary classification with metrics like accuracy and AUC. This design allows flexibility in architecture exploration, enabling customisation of depth and width to optimise performance on the dataset.
+    </p>
+    <figure>
+        <img src="https://raw.githubusercontent.com/Cynthiaudoye/MLP_CreditRisk_Tutorial/refs/heads/main/Images/Building%20the%20MLP.png" alt="Building the MLP" style="width:100%; max-width:600px;">
+        <figcaption><strong>Figure 2:</strong> Building the MLP</figcaption>
+    </figure>
+    
+    <h3>3. Training and Evaluation with Class Weights</h3>
+    <p>
+        The <code>train_and_evaluate_with_class_weights</code> function trains and evaluates the MLP model while addressing class imbalance by applying class weights. It takes the model, training and validation datasets, class weights, and training parameters such as epochs and batch size. The function outputs the training history and evaluation metrics, including accuracy and AUC, to measure the model's performance effectively.
+    </p>
+    
+    <h3>4. Experimentation and Hyperparameter Tuning</h3>
+    <p>
+        The <code>run_experiments</code> function automates the process of exploring various configurations of the MLP model. It iterates through combinations of depth (number of layers), width (neurons per layer), and other hyperparameters. The results of each configuration are logged to facilitate comparison and identify the optimal architecture for the dataset. This function simplifies architecture exploration and supports effective model optimisation.
+    </p>
+    
+    <h3>5. Improving the Model</h3>
     <ul>
-        <li>
-            <strong>Dropout:</strong><br>
-            Randomly disables some neurons during training to prevent the model from relying too heavily on specific patterns (Srivastava et al., 2014).
-        </li>
-        <li>
-            <strong>L2 Regularisation:</strong><br>
-            Adds a penalty for large weights, helping reduce overfitting and improve the model's ability to generalise to new data (Hinton et al., 2012).
-        </li>
+        <li><strong>Dropout:</strong><br>Randomly disables some neurons during training to prevent the model from relying too heavily on specific patterns (Srivastava et al., 2014).</li>
+        <li><strong>L2 Regularisation:</strong><br>Adds a penalty for large weights, helping reduce overfitting and improve the model's ability to generalise to new data (Hinton et al., 2012).</li>
     </ul>
-
-    <h3>3. Impact of Depth and Width</h3>
+    
+    <h3>6. Impact of Depth and Width</h3>
     <ul>
-        <li>
-            <strong>Depth (Layers):</strong><br>
-            Adding more layers helps the model learn more detailed patterns but can lead to overfitting and slower training if overdone.
-        </li>
-        <li>
-            <strong>Width (Neurons per Layer):</strong><br>
-            Increasing neurons gives the model more capacity to learn but also increases training time without always improving performance.
-        </li>
-        <li>
-            <strong>Optimal Design:</strong><br>
-            Tests showed that a model with 4 layers and 64 neurons per layer achieved the best trade-off between performance and complexity (Goodfellow et al., 2016).
-        </li>
+        <li><strong>Depth (Layers):</strong><br>Adding more layers helps the model learn more detailed patterns but can lead to overfitting and slower training if overdone.</li>
+        <li><strong>Width (Neurons per Layer):</strong><br>Increasing neurons gives the model more capacity to learn but also increases training time without always improving performance.</li>
+        <li><strong>Optimal Design:</strong><br>Tests showed that a model with 4 layers and 64 neurons per layer achieved the best trade-off between performance and complexity (Goodfellow et al., 2016).</li>
     </ul>
-
-    <h3>4. Using Class Weights</h3>
+    
+    <h3>7. Using Class Weights</h3>
     <p>
         The "Credit-G" dataset is imbalanced, with more 'good' cases than 'bad.' Class weights were applied to make the model focus more on the minority class ('bad'). This improved the recall for 'bad' cases, balancing the model’s predictions (He & Garcia, 2009).
     </p>
 </section>
+
 
 <section id="experimentation-results">
     <h2>Experimentation and Results</h2>
