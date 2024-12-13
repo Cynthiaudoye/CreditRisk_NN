@@ -75,6 +75,9 @@ Some of the key visualizations include:
 - **`Images`**:
   - Visualization plots: Heatmap showing AUC-ROC scores for various configurations, Heatmap of validation accuracy, Confusion matrix visualizing classification performance
 - **`LICENSE`**: File containing the project's license information.
+- **`PDF Report`**: The tutorial report
+- **`Web Page`**: The web page of the tutoria. Web URL: https://cynthiaudoye.github.io/MLP_CreditRisk_Tutorial![image](https://github.com/user-attachments/assets/ad67c7ed-792d-49de-ac6e-8fb7ee68aca1)
+
 
 ---
 
@@ -93,15 +96,15 @@ Datacamp, n.d., Multilayer perceptrons in machine learning. Available at: [https
 
 Dua, D. & Graff, C., 2019. UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science. Available at: [https://www.openml.org/d/31](https://www.openml.org/d/31) [Accessed 9 Dec. 2024].
 
-LeCun, Y., Bengio, Y. & Hinton, G., 2015. Deep Learning. *Nature*, 521(7553), pp.436–444. Available at: [https://doi.org/10.1038/nature14539](https://doi.org/10.1038/nature14539).
-
-Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I. & Salakhutdinov, R., 2014. Dropout: A Simple Way to Prevent Neural Networks from Overfitting. *Journal of Machine Learning Research*, 15(1), pp.1929–1958. Available at: [http://jmlr.org/papers/v15/srivastava14a.html](http://jmlr.org/papers/v15/srivastava14a.html).
-
-Hinton, G., Srivastava, N. & Krizhevsky, A., 2012. Improving Neural Networks by Preventing Co-Adaptation of Feature Detectors. *arXiv preprint*, arXiv:1207.0580. Available at: [https://arxiv.org/abs/1207.0580](https://arxiv.org/abs/1207.0580).
+Goodfellow, I., Bengio, Y. & Courville, A., 2016. *Deep Learning*. Cambridge, MA: MIT Press. Available at: [https://www.deeplearningbook.org](https://www.deeplearningbook.org) [Accessed 9 Dec. 2024].
 
 He, H. & Garcia, E.A., 2009. Learning from Imbalanced Data. *IEEE Transactions on Knowledge and Data Engineering*, 21(9), pp.1263–1284. Available at: [https://doi.org/10.1109/TKDE.2008.239](https://doi.org/10.1109/TKDE.2008.239).
 
-Goodfellow, I., Bengio, Y. & Courville, A., 2016. *Deep Learning*. Cambridge, MA: MIT Press. Available at: [https://www.deeplearningbook.org](https://www.deeplearningbook.org) [Accessed 9 Dec. 2024].
+Hinton, G., Srivastava, N. & Krizhevsky, A., 2012. Improving Neural Networks by Preventing Co-Adaptation of Feature Detectors. *arXiv preprint*, arXiv:1207.0580. Available at: [https://arxiv.org/abs/1207.0580](https://arxiv.org/abs/1207.0580).
+
+LeCun, Y., Bengio, Y. & Hinton, G., 2015. Deep Learning. *Nature*, 521(7553), pp.436–444. Available at: [https://doi.org/10.1038/nature14539](https://doi.org/10.1038/nature14539).
+
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I. & Salakhutdinov, R., 2014. Dropout: A Simple Way to Prevent Neural Networks from Overfitting. *Journal of Machine Learning Research*, 15(1), pp.1929–1958. Available at: [http://jmlr.org/papers/v15/srivastava14a.html](http://jmlr.org/papers/v15/srivastava14a.html).
 
 ---
 
