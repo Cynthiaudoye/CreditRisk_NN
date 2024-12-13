@@ -76,8 +76,7 @@ Some of the key visualizations include:
   - Visualization plots: Heatmap showing AUC-ROC scores for various configurations, Heatmap of validation accuracy, Confusion matrix visualizing classification performance
 - **`LICENSE`**: File containing the project's license information.
 - **`PDF Report`**: The tutorial report
-- **`Web Page`**: The web page of the tutoria. Web URL: https://cynthiaudoye.github.io/MLP_CreditRisk_Tutorial![image](https://github.com/user-attachments/assets/ad67c7ed-792d-49de-ac6e-8fb7ee68aca1)
-
+- **`Web Page`**: The web page of the tutoria. Web URL: https://cynthiaudoye.github.io/MLP_CreditRisk_Tutorial
 
 ---
 
